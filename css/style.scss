@@ -1,5 +1,38 @@
 @import "_nullcss";
 
-body{
-	background-color: #ECEEF4;
+body {
+	background-color: #eceef4;
+	font-family: "Lato", sans-serif;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.header {
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 140px;
+	}
+
+	&__back {
+	}
+
+	&__icon {
+		height: 50px;
+		width: 50px;
+	}
+
+	&__sign {
+	}
+}
+
+.standart-btn {
+	padding: 15px 40px;
+	border: 1px solid black;
+	border-radius: 5px;
 }
