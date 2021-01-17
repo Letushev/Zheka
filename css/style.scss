@@ -8,6 +8,7 @@ $fs-text: 14px;
 $fs-middle: 16px;
 $fs-title: 20px;
 
+
 body {
 	background-color: #eceef4;
 	font-family: "Lato", sans-serif;
@@ -52,5 +53,78 @@ body {
 	&__logo-icon {
 		height: 80px;
 		width: 80px;
+	}
+}
+
+.main {
+
+	&__item {
+	}
+
+	&__header {
+	}
+
+	&__header-left {
+	}
+
+	&__header-right {
+	}
+}
+
+.main-info {
+
+	&__title {
+	}
+
+	&__icon {
+	}
+
+	&__subtitle {
+	}
+
+	&__lists {
+	}
+}
+.main-list {
+
+	&__title {
+	}
+
+	&__text {
+	}
+}
+.main-btns {
+
+	&__order {
+	}
+
+	&__print {
+	}
+}
+
+.main-help {
+
+	&__title {
+	}
+
+	&__icon {
+	}
+
+	&__subtitle {
+	}
+
+	&__infornation {
+	}
+
+	&__text {
+	}
+
+	&__contacts {
+	}
+
+	&__phone {
+	}
+
+	&__email {
 	}
 }
