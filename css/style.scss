@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-	max-width: 1000px;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 10px;
 }
@@ -42,6 +42,11 @@ body {
 		text-transform: uppercase;
 		font-size: $fs-text;
 		color: $m-gray;
+	}
+
+	&__back:hover,
+	&__sign:hover {
+		text-decoration: underline;
 	}
 
 	&__back-icon,
@@ -72,11 +77,11 @@ body {
 		justify-content: space-between;
 		border-right: 1px solid $l-gray;
 		padding: 30px 40px;
-		flex: 0 1 70%;
+		flex: 0 1 65%;
 	}
 
 	&__header-right {
-		flex: 0 1 30%;
+		flex: 0 1 35%;
 	}
 }
 
@@ -105,7 +110,7 @@ body {
 		justify-content: space-between;
 		width: 100%;
 		padding-left: 44px;
-		padding-top: 30px;
+		padding-top: 40px;
 	}
 }
 
@@ -128,6 +133,9 @@ body {
 }
 
 .main-btns {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	&__order,
 	&__print {
 		width: 180px;
@@ -150,27 +158,48 @@ body {
 }
 
 .main-help {
+	padding: 30px 40px;
 	&__title {
+		display: flex;
+		align-items: center;
 	}
 
 	&__icon {
+		padding-right: 20px;
 	}
 
 	&__subtitle {
+		text-transform: uppercase;
+		font-size: $fs-text;
+		font-weight: bold;
+		color: $d-gray;
 	}
 
 	&__infornation {
+		padding-left: 44px;
+		padding-top: 10px;
 	}
 
 	&__text {
+		color: $l-gray;
+		font-size: $fs-text;
+		line-height: 20px;
 	}
 
 	&__contacts {
+		padding-left: 44px;
+		padding-top: 10px;
+		display: flex;
 	}
 
-	&__phone {
+	&__phone,
+	&__email {
+		font-size: $fs-text;
+		font-weight: bold;
+		color: $d-gray;
 	}
 
 	&__email {
+		padding-left: 20px;
 	}
 }
