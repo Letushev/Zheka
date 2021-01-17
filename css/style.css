@@ -75,6 +75,13 @@ body {
   padding: 0 10px;
 }
 
+.standart-btn {
+  border: 1px solid #bbc6de;
+  padding: 15px 30px;
+  border-radius: 5px;
+  background: #f7f7fa;
+}
+
 .header__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,13 +95,29 @@ body {
   height: 140px;
 }
 
+.header__back, .header__sign {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #9a9fbd;
+}
+
+.header__back::before {
+  content: "";
+  background: url(../icons/back.svg) 0 0/100% 100% no-repeat;
+  width: 50px;
+  height: 30px;
+  display: inline-block;
+}
+
+.header__sign::before {
+  content: "";
+  background: url(../icons/sign.svg) 0 0/100% 100% no-repeat;
+  width: 50px;
+  height: 30px;
+  display: inline-block;
+}
+
 .header__icon {
   height: 50px;
   width: 50px;
-}
-
-.standart-btn {
-  padding: 15px 40px;
-  border: 1px solid black;
-  border-radius: 5px;
 }

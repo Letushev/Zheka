@@ -1,5 +1,13 @@
 @import "_nullcss";
 
+$bg-gray: #f7f7fa;
+$l-gray: #bbc6de;
+$m-gray: #9a9fbd;
+$d-gray: #777e96;
+$fs-text: 14px;
+$fs-middle: 16px;
+$fs-title: 20px;
+
 body {
 	background-color: #eceef4;
 	font-family: "Lato", sans-serif;
@@ -11,6 +19,13 @@ body {
 	padding: 0 10px;
 }
 
+.standart-btn {
+	border: 1px solid $l-gray;
+	padding: 15px 30px;
+	border-radius: 5px;
+	background: $bg-gray;
+}
+
 .header {
 	&__item {
 		display: flex;
@@ -19,20 +34,31 @@ body {
 		height: 140px;
 	}
 
-	&__back {
+	&__back,
+	&__sign {
+		text-transform: uppercase;
+		font-size: $fs-text;
+		color: $m-gray;
+	}
+
+	&__back::before {
+		content: "";
+		background: url(../icons/back.svg) 0 0 / 100% 100% no-repeat;
+		width: 50px;
+		height: 30px;
+		display: inline-block;
+	}
+
+	&__sign::before {
+		content: "";
+		background: url(../icons/sign.svg) 0 0 / 100% 100% no-repeat;
+		width: 50px;
+		height: 30px;
+		display: inline-block;
 	}
 
 	&__icon {
 		height: 50px;
 		width: 50px;
 	}
-
-	&__sign {
-	}
-}
-
-.standart-btn {
-	padding: 15px 40px;
-	border: 1px solid black;
-	border-radius: 5px;
 }
