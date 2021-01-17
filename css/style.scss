@@ -20,8 +20,11 @@ body {
 }
 
 .standart-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	border: 1px solid $l-gray;
-	padding: 15px 30px;
+	padding: 15px 20px;
 	border-radius: 5px;
 	background: $bg-gray;
 }
@@ -41,24 +44,13 @@ body {
 		color: $m-gray;
 	}
 
-	&__back::before {
-		content: "";
-		background: url(../icons/back.svg) 0 0 / 100% 100% no-repeat;
-		width: 50px;
-		height: 30px;
-		display: inline-block;
+	&__back-icon,
+	&__sign-icon {
+		padding-right: 8px;
 	}
 
-	&__sign::before {
-		content: "";
-		background: url(../icons/sign.svg) 0 0 / 100% 100% no-repeat;
-		width: 50px;
-		height: 30px;
-		display: inline-block;
-	}
-
-	&__icon {
-		height: 50px;
-		width: 50px;
+	&__logo-icon {
+		height: 80px;
+		width: 80px;
 	}
 }
