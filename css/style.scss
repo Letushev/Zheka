@@ -3,11 +3,10 @@
 $bg-gray: #f7f7fa;
 $l-gray: #bbc6de;
 $m-gray: #9a9fbd;
-$d-gray: #777e96;
-$fs-text: 14px;
+$d-gray: #6e768f;
+$fs-text: 12px;
 $fs-middle: 16px;
 $fs-title: 20px;
-
 
 body {
 	background-color: #eceef4;
@@ -57,53 +56,100 @@ body {
 }
 
 .main {
-
 	&__item {
+		border: 1px solid $l-gray;
+		border-radius: 5px;
+		background-color: #fff;
 	}
 
 	&__header {
+		display: flex;
+		border-bottom: 1px solid $l-gray;
 	}
 
 	&__header-left {
+		display: flex;
+		justify-content: space-between;
+		border-right: 1px solid $l-gray;
+		padding: 30px 40px;
+		flex: 0 1 70%;
 	}
 
 	&__header-right {
+		flex: 0 1 30%;
 	}
 }
 
 .main-info {
+	width: 100%;
+	padding-right: 40px;
 
 	&__title {
+		display: flex;
+		align-items: center;
 	}
 
 	&__icon {
+		padding-right: 20px;
 	}
 
 	&__subtitle {
+		text-transform: uppercase;
+		font-size: $fs-middle;
+		font-weight: bold;
+		color: $d-gray;
 	}
 
 	&__lists {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		padding-left: 44px;
+		padding-top: 30px;
 	}
 }
-.main-list {
 
+.main-list {
 	&__title {
+		text-transform: uppercase;
+		font-size: $fs-text;
+		font-weight: bold;
+		letter-spacing: 10;
+		color: $d-gray;
+		padding-bottom: 8px;
 	}
 
 	&__text {
+		font-size: $fs-text;
+		color: $d-gray;
+		font-weight: bold;
+		font-weight: lighter;
 	}
 }
-.main-btns {
 
-	&__order {
+.main-btns {
+	&__order,
+	&__print {
+		width: 180px;
+		text-transform: uppercase;
+		color: $m-gray;
+		letter-spacing: 10;
+		font-weight: bold;
+		background: $bg-gray;
 	}
 
-	&__print {
+	&__order:hover,
+	&__print:hover {
+		color: white;
+		background: #5fcac6;
+	}
+
+	&__order {
+		margin-bottom: 10px;
 	}
 }
 
 .main-help {
-
 	&__title {
 	}
 

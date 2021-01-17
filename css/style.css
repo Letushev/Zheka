@@ -106,7 +106,7 @@ body {
 
 .header__back, .header__sign {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12px;
   color: #9a9fbd;
 }
 
@@ -117,4 +117,108 @@ body {
 .header__logo-icon {
   height: 80px;
   width: 80px;
+}
+
+.main__item {
+  border: 1px solid #bbc6de;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.main__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #bbc6de;
+}
+
+.main__header-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-right: 1px solid #bbc6de;
+  padding: 30px 40px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 70%;
+          flex: 0 1 70%;
+}
+
+.main__header-right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 30%;
+          flex: 0 1 30%;
+}
+
+.main-info {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.main-info__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-info__icon {
+  padding-right: 20px;
+}
+
+.main-info__subtitle {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  color: #6e768f;
+}
+
+.main-info__lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding-left: 44px;
+  padding-top: 30px;
+}
+
+.main-list__title {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 10;
+  color: #6e768f;
+  padding-bottom: 8px;
+}
+
+.main-list__text {
+  font-size: 12px;
+  color: #6e768f;
+  font-weight: bold;
+  font-weight: lighter;
+}
+
+.main-btns__order, .main-btns__print {
+  width: 180px;
+  text-transform: uppercase;
+  color: #9a9fbd;
+  letter-spacing: 10;
+  font-weight: bold;
+  background: #f7f7fa;
+}
+
+.main-btns__order:hover, .main-btns__print:hover {
+  color: white;
+  background: #5fcac6;
+}
+
+.main-btns__order {
+  margin-bottom: 10px;
 }
