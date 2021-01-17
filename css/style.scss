@@ -203,3 +203,50 @@ body {
 		padding-left: 20px;
 	}
 }
+
+.form {
+	padding: 80px 60px;
+}
+
+.form-translate {
+	&__title {
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 15;
+		font-size: $fs-title;
+		color: $d-gray;
+		padding-bottom: 10px;
+		border-bottom: 1px solid $l-gray;
+	}
+}
+
+.form-translate {
+	&__inputs {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	&__input {
+	}
+
+	&__radio {
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		appearance: none;
+	}
+
+	&__info {
+		width: 100px;
+		height: 100px;
+	}
+
+	&__info-item {
+	}
+
+	&__img {
+	}
+
+	&__text {
+	}
+}

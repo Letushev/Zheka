@@ -292,3 +292,39 @@ body {
 .main-help__email {
   padding-left: 20px;
 }
+
+.form {
+  padding: 80px 60px;
+}
+
+.form-translate__title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 15;
+  font-size: 20px;
+  color: #6e768f;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #bbc6de;
+}
+
+.form-translate__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.form-translate__radio {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.form-translate__info {
+  width: 100px;
+  height: 100px;
+}
