@@ -221,32 +221,60 @@ body {
 }
 
 .form-translate {
+	padding: 60px 0px 80px;
 	&__inputs {
 		display: flex;
 		justify-content: space-around;
 	}
 
-	&__input {
-	}
-
 	&__radio {
 		position: absolute;
-		width: 100px;
-		height: 100px;
+		width: 250px;
+		height: 200px;
 		appearance: none;
 	}
 
+	&__radio:focus {
+		outline: none;
+		border-radius: 5px;
+		border: 7px solid #76a7e1;
+	}
+
+	&__radio:focus::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translate(50%, -50%);
+		background: url(../icons/check.svg) 0 0 / cover no-repeat;
+		border: 7px solid #76a7e1;
+		border-radius: 50%;
+		height: 40px;
+		width: 40px;
+	}
+
 	&__info {
-		width: 100px;
-		height: 100px;
+		border: 1px solid $l-gray;
+		border-radius: 5px;
+		width: 250px;
+		height: 200px;
+		background-color: $bg-gray;
 	}
 
 	&__info-item {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
 	}
 
 	&__img {
+		padding-bottom: 10px;
 	}
 
 	&__text {
+		font-size: $fs-middle;
+		color: $d-gray;
 	}
 }
