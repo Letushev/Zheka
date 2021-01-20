@@ -16,6 +16,16 @@ $fs-title: 20px;
 	position: relative;
 }
 
+%standart-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid $l-gray;
+	padding: 15px 20px;
+	border-radius: 5px;
+	background: $bg-gray;
+}
+
 @mixin fieldset-title-num($num-t) {
 	content: $num-t;
 	position: absolute;
@@ -30,8 +40,6 @@ $fs-title: 20px;
 	color: $m-gray;
 	border: 2px solid $m-gray;
 	border-radius: 50%;
-
-
 }
 
 body {
@@ -45,16 +53,6 @@ body {
 	padding: 0 10px;
 }
 
-.standart-btn {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 1px solid $l-gray;
-	padding: 15px 20px;
-	border-radius: 5px;
-	background: $bg-gray;
-}
-
 .header {
 	&__item {
 		display: flex;
@@ -65,6 +63,7 @@ body {
 
 	&__back,
 	&__sign {
+		@extend %standart-btn;
 		text-transform: uppercase;
 		font-size: $fs-text;
 		color: $m-gray;
@@ -162,8 +161,10 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+
 	&__order,
 	&__print {
+		@extend %standart-btn;
 		width: 180px;
 		text-transform: uppercase;
 		color: $m-gray;
@@ -320,18 +321,44 @@ body {
 }
 
 .upload {
-
 	&__title {
 		@extend %fieldset-title-style;
 	}
-	&__title::before{
-		@include fieldset-title-num('1')
+	&__title::before {
+		@include fieldset-title-num("1");
 	}
-	&__title::after{
-		content: '(Doc, Docx, Text, PDF, Markdown)';
+	&__title::after {
+		content: "(Doc, Docx, Text, PDF, Markdown)";
 		padding-left: 10px;
 		font-size: $fs-text;
 		font-weight: lighter;
 		color: $d-gray;
+	}
+
+	&__content {
+		padding: 40px 0 80px;
+	}
+
+	&__file {
+		opacity: 0;
+		height: 0;
+		position: absolute;
+	}
+
+	&__lable {
+		@extend %standart-btn;
+		width: 230px;
+		padding-bottom: 30px;
+	}
+
+	&__lable:hover {
+		background-color: #e2e8ea;
+	}
+
+	&__lable-text {
+		font-size: $fs-middle;
+		color: $m-gray;
+		font-weight: bold;
+		padding-left: 8px;
 	}
 }

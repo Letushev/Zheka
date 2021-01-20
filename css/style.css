@@ -72,18 +72,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-body {
-  background-color: #eceef4;
-  font-family: "Lato", sans-serif;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
-.standart-btn {
+.header__back, .header__sign, .main-btns__order, .main-btns__print, .upload__lable {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,6 +86,17 @@ body {
   padding: 15px 20px;
   border-radius: 5px;
   background: #f7f7fa;
+}
+
+body {
+  background-color: #eceef4;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .header__item {
@@ -426,9 +426,35 @@ body {
 }
 
 .upload__title::after {
-  content: '(Doc, Docx, Text, PDF, Markdown)';
+  content: "(Doc, Docx, Text, PDF, Markdown)";
   padding-left: 10px;
   font-size: 12px;
   font-weight: lighter;
   color: #6e768f;
+}
+
+.upload__content {
+  padding: 40px 0 80px;
+}
+
+.upload__file {
+  opacity: 0;
+  height: 0;
+  position: absolute;
+}
+
+.upload__lable {
+  width: 230px;
+  padding-bottom: 30px;
+}
+
+.upload__lable:hover {
+  background-color: #e2e8ea;
+}
+
+.upload__lable-text {
+  font-size: 16px;
+  color: #9a9fbd;
+  font-weight: bold;
+  padding-left: 8px;
 }
