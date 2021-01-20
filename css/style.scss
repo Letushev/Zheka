@@ -26,6 +26,12 @@ $fs-title: 20px;
 	background: $bg-gray;
 }
 
+%upload-column {
+	display: flex;
+	flex-direction: column;
+	flex: 0 1 25%;
+}
+
 @mixin fieldset-title-num($num-t) {
 	content: $num-t;
 	position: absolute;
@@ -348,7 +354,6 @@ body {
 	&__lable {
 		@extend %standart-btn;
 		width: 230px;
-		padding-bottom: 30px;
 	}
 
 	&__lable:hover {
@@ -360,5 +365,56 @@ body {
 		color: $m-gray;
 		font-weight: bold;
 		padding-left: 8px;
+	}
+
+	&__info {
+		border: 1px solid $l-gray;
+		border-radius: 5px;
+		margin-top: 30px;
+		padding: 30px 40px;
+		display: flex;
+	}
+
+	&__file-name {
+		@extend %upload-column;
+		flex: 0 1 35%;
+	}
+
+	&__info-title {
+		font-size: $fs-text;
+		text-transform: uppercase;
+		color: $d-gray;
+		font-weight: bold;
+		letter-spacing: 1px;
+	}
+
+	&__info-list {
+		display: flex;
+		align-items: center;
+		height: 60px;
+	}
+
+	&__info-text {
+		color: $m-gray;
+		font-size: $fs-text;
+		display: inline-block;
+	}
+
+	&__info-img {
+		padding-right: 8px;
+	}
+
+	&__file-size {
+		@extend %upload-column;
+	}
+
+	&__file-words {
+		@extend %upload-column;
+	}
+
+	&__file-remove {
+		@extend %upload-column;
+		align-items: center;
+		flex: 0 1 15%;
 	}
 }
