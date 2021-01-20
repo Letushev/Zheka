@@ -64,6 +64,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+.upload__title {
+  font-size: 20px;
+  color: #6e768f;
+  font-weight: bold;
+  letter-spacing: 1px;
+  position: relative;
+}
+
 body {
   background-color: #eceef4;
   font-family: "Lato", sans-serif;
@@ -197,7 +205,7 @@ body {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
-  letter-spacing: 10;
+  letter-spacing: 1px;
   color: #6e768f;
   padding-bottom: 8px;
 }
@@ -226,7 +234,7 @@ body {
   width: 180px;
   text-transform: uppercase;
   color: #9a9fbd;
-  letter-spacing: 10;
+  letter-spacing: 1px;
   font-weight: bold;
   background: #f7f7fa;
 }
@@ -301,64 +309,12 @@ body {
 
 .form-translate {
   padding: 60px 0px 80px;
-  /*
-	&__inputs {
-		display: flex;
-		justify-content: space-between;
-	}
-	*/
-  /*
-	&__radio {
-		opacity: 1;
-		width: 250px;
-		height: 200px;
-	}
-
-	&__input {
-		border: 1px solid $l-gray;
-		border-radius: 5px;
-		width: 250px;
-		height: 200px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		background-color: $bg-gray;
-	}
-
-	&__radio:checked + &__input {
-		border-radius: 5px;
-		border: 7px solid #76a7e1;
-	}
-
-	&__radio:focus::before{
-		content: "";
-		position: absolute;
-		top: 0;
-		right: 0;
-		transform: translate(50%, -50%);
-		background: url(../icons/check.svg) 0 0 / cover no-repeat;
-		border: 7px solid #76a7e1;
-		border-radius: 50%;
-		height: 40px;
-		width: 40px;
-	}
-
-	&__radio:focus + &__input {
-		border-radius: 5px;
-		border: 7px solid #76a7e1;
-	}
-
-	&__input:hover {
-		background-color: #dfd;
-	}
-	*/
 }
 
 .form-translate__title {
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 15;
+  letter-spacing: 1px;
   font-size: 20px;
   color: #6e768f;
   padding-bottom: 10px;
@@ -443,5 +399,36 @@ body {
 
 .form-translate__text {
   font-size: 16px;
+  color: #6e768f;
+}
+
+.upload__title::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  width: 40px;
+  color: #9a9fbd;
+  border: 2px solid #9a9fbd;
+  border-radius: 50%;
+}
+
+.upload__title::after {
+  content: '(Doc, Docx, Text, PDF, Markdown)';
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: lighter;
   color: #6e768f;
 }
