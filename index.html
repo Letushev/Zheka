@@ -12,15 +12,19 @@
 	<header class="header">
 		<div class="container">
 			<div class="header__item">
+
 				<button class="header__back standart-btn">
 					<img src="icons/back.svg" alt="#" class="header__back-icon">
 					<p>Go back</p>
 				</button>
+
 				<img src="icons/logo.svg" alt="#" class="header__logo-icon">
+
 				<button class="header__sign standart-btn">
 					<img src="icons/sign.svg" alt="#" class="header__sign-icon">
 					<p>Sign in</p>
 				</button>
+
 			</div>
 		</div>
 	</header>
@@ -31,10 +35,12 @@
 				<div class="main__header">
 					<div class="main__header-left">
 						<div class="main-info">
+
 							<div class="main-info__title">
 								<img class="main-info__icon" src="icons/order.svg" alt="#">
 								<h2 class="main-info__subtitle">Your order</h2>
 							</div>
+
 							<div class="main-info__lists">
 								<div class="main-list">
 									<h3 class="main-list__title">items</h3>
@@ -54,63 +60,94 @@
 								</div>
 							</div>
 						</div>
+
 						<div class="main-btns">
 							<button class="main-btns__order standart-btn">Place order</button>
 							<button class="main-btns__print standart-btn">Print a quote</button>
 						</div>
+
 					</div>
+
 					<div class="main__header-right">
 						<div class="main-help">
+
 							<div class="main-help__title">
 								<img src="icons/help.svg" alt="#" class="main-help__icon">
 								<h2 class="main-help__subtitle"> help center</h2>
 							</div>
+
 							<div class="main-help__infornation">
 								<p class="main-help__text">
 									If you need assistance while placing your order, contact one of our beloved Project Manager
 									by phone or email.
 								</p>
 							</div>
+
 							<div class="main-help__contacts">
 								<p class="main-help__phone">+971 (0) 555 555</p>
 								<p class="main-help__email">help@qtest.com</p>
 							</div>
+
 						</div>
 					</div>
 				</div>
+
 				<form action="#" method="post" enctype="multipart/form-data" class="form">
-					<fieldset class="form-translate">
-						<legend class="form-translate__title">select what you want to translate</legend>
-						<div class="form-translate__inputs">
-							<lable class="form-translate__input">
-								<input class="form-translate__radio" type="radio" name="web" value="web">
-								<div class="form-translate__info">
-									<div class="form-translate__info-item">
+					<div class="form__container">
+
+
+						<fieldset class="form-translate">
+
+							<legend class="form-translate__title">select what you want to translate</legend>
+
+							<div class="form-translate__choice">
+
+								<div class="form-translate__choice-block">
+
+									<input id="form-translate__radio1" name="form-translate" class="form-translate__radio"
+										type="radio" value="web" tabindex="1">
+
+									<lable for="form-translate__radio1" class="form-translate__lable">
 										<img class="form-translate__img" src="icons/web.svg" alt="#">
-										<h4 class="form-translate__text">Website</h4>
-									</div>
+										<p class="form-translate__text">Website</p>
+									</lable>
+
 								</div>
-							</lable>
-							<lable class="form-translate__input">
-								<input class="form-translate__radio" type="radio" name="doc" value="doc">
-								<div class="form-translate__info">
-									<div class="form-translate__info-item">
+
+								<div class="form-translate__choice-block">
+
+									<input id="form-translate__radio2" name="form-translate" class="form-translate__radio"
+										type="radio" value="doc" tabindex="2">
+
+									<lable class="form-translate__lable" for="form-translate__radio2">
 										<img class="form-translate__img" src="icons/doc.svg" alt="#">
-										<h4 class="form-translate__text">Documents</h4>
-									</div>
+										<p class="form-translate__text">Documents</p>
+									</lable>
+
 								</div>
-							</lable>
-							<lable class="form-translate__input">
-								<input class="form-translate__radio" type="radio" name="acc" value="acc">
-								<div class="form-translate__info">
-									<div class="form-translate__info-item">
+
+								<div class="form-translate__choice-block">
+
+									<input class="form-translate__radio" type="radio" name="form-translate" value="acc"
+										id="form-translate__input3" tabindex="3">
+
+									<lable class="form-translate__lable" for="form-translate__input3">
 										<img class="form-translate__img" src="icons/acc.svg" alt="#">
-										<h4 class="form-translate__text">Social Account</h4>
-									</div>
+										<p class="form-translate__text">Social Account
+										</p>
+									</lable>
+
 								</div>
-							</lable>
-						</div>
-					</fieldset>
+
+							</div>
+						</fieldset>
+
+
+						<fieldset class="upload">
+							<div class="fieldset-numtitle"></div>
+							<legend class="upload__title fieldset-title">Upload your documents</legend>
+						</fieldset>
+					</div>
 				</form>
 			</div>
 		</div>
