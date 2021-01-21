@@ -27,6 +27,34 @@ $fs-title: 20px;
 	background: $bg-gray;
 }
 
+%radio-lable {
+	border: 1px solid $l-gray;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $bg-gray;
+}
+
+%radio_focus-cheked {
+	outline: none;
+	border-radius: 5px;
+	border: 5px solid #76a7e1;
+}
+
+%radio-after {
+	content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translate(50%, -50%);
+		background: url(../icons/check.svg) 0 0 / cover no-repeat;
+		border: 5px solid #76a7e1;
+		border-radius: 50%;
+		height: 40px;
+		width: 40px;
+}
+
 %lang-from_to {
 	width: 50px;
 	display: flex;
@@ -248,6 +276,9 @@ body {
 		margin: 80px auto;
 		padding: 0 10px;
 	}
+	&__tone-urgent {
+
+	}
 }
 
 .form-translate {
@@ -270,9 +301,9 @@ body {
 
 	&__radio {
 		position: absolute;
+		opacity: 0;
 		width: 250px;
 		height: 200px;
-		opacity: 0;
 	}
 
 	&__choice-block {
@@ -280,45 +311,29 @@ body {
 	}
 
 	&__lable {
-		border: 1px solid $l-gray;
-		border-radius: 5px;
+		@extend %radio-lable;
 		width: 250px;
 		height: 200px;
-		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		background-color: $bg-gray;
 	}
 
 	&__radio:focus + &__lable {
-		outline: none;
-		border-radius: 5px;
-		border: 7px solid #76a7e1;
+		@extend %radio_focus-cheked;
+	}
+
+	
+	&__radio:checked + &__lable {
+		@extend %radio_focus-cheked;
 	}
 
 	&__radio:hover + &__lable {
 		background-color: $hov-gray;
 	}
 
-	&__radio:checked + &__lable {
-		outline: none;
-		border-radius: 5px;
-		border: 7px solid #76a7e1;
-	}
 
-	&__radio:checked + &__lable::before,
-	&__radio:focus + &__lable::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		right: 0;
-		transform: translate(50%, -50%);
-		background: url(../icons/check.svg) 0 0 / cover no-repeat;
-		border: 7px solid #76a7e1;
-		border-radius: 50%;
-		height: 40px;
-		width: 40px;
+	&__radio:checked + &__lable::after,
+	&__radio:focus + &__lable::after {
+		@extend %radio-after;
 	}
 
 	&__img {
@@ -506,6 +521,10 @@ body {
 		align-items: center;
 	}
 
+	&__rubbish {
+		padding-left: 5px;
+	}
+
 	&__add {
 		margin-left: 20px;
 		height: 40px;
@@ -523,5 +542,69 @@ body {
 
 	&__add:hover {
 		background-color: $hov-gray;
+	}
+}
+
+.tone {
+	margin-top: 60px;
+	&__title {
+		@extend %fieldset-title-style;
+	}
+	&__title::after {
+		@include fieldset-title-num("3");
+	}
+
+	&__choice {
+		padding-top: 40px;
+		display: flex;
+		flex-direction: column;
+		flex: 0 1 30%;
+	}
+
+	&__choice-block {
+		width: 200px;
+		height: 60px;
+		position: relative;
+		margin-bottom: 40px;
+	}
+
+	&__radio {
+		position: absolute;
+		opacity: 0;
+		width: 200px;
+		height: 60px;
+	}
+
+	&__lable {
+		@extend %radio-lable;
+		width: 200px;
+		height: 60px;
+	}
+
+	&__radio:focus + &__lable {
+		@extend %radio_focus-cheked;
+	}
+
+	
+	&__radio:checked + &__lable {
+		@extend %radio_focus-cheked;
+	}
+
+	&__radio:hover + &__lable  {
+		background-color: $hov-gray;
+	}
+
+	&__radio:checked + &__lable::after,
+	&__radio:focus + &__lable::after {
+		@extend %radio-after;
+	}
+
+	&__img {
+		padding-right: 10px;
+	}
+
+	&__text {
+		font-size: $fs-middle;
+		color: $d-gray;
 	}
 }

@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-.upload__title, .lang__title {
+.upload__title, .lang__title, .tone__title {
   font-size: 20px;
   color: #6e768f;
   font-weight: bold;
@@ -86,6 +86,43 @@ h1, h2, h3, h4, h5, h6 {
   padding: 15px 20px;
   border-radius: 5px;
   background: #f7f7fa;
+}
+
+.form-translate__lable, .tone__lable {
+  border: 1px solid #bbc6de;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f7f7fa;
+}
+
+.form-translate__radio:focus + .form-translate__lable, .form-translate__radio:checked + .form-translate__lable, .tone__radio:focus + .tone__lable, .tone__radio:checked + .tone__lable {
+  outline: none;
+  border-radius: 5px;
+  border: 5px solid #76a7e1;
+}
+
+.form-translate__radio:checked + .form-translate__lable::after,
+.form-translate__radio:focus + .form-translate__lable::after, .tone__radio:checked + .tone__lable::after,
+.tone__radio:focus + .tone__lable::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  background: url(../icons/check.svg) 0 0/cover no-repeat;
+  border: 5px solid #76a7e1;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
 }
 
 .lang__from-text, .lang__to-text {
@@ -346,9 +383,9 @@ body {
 
 .form-translate__radio {
   position: absolute;
+  opacity: 0;
   width: 250px;
   height: 200px;
-  opacity: 0;
 }
 
 .form-translate__choice-block {
@@ -356,55 +393,16 @@ body {
 }
 
 .form-translate__lable {
-  border: 1px solid #bbc6de;
-  border-radius: 5px;
   width: 250px;
   height: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #f7f7fa;
-}
-
-.form-translate__radio:focus + .form-translate__lable {
-  outline: none;
-  border-radius: 5px;
-  border: 7px solid #76a7e1;
 }
 
 .form-translate__radio:hover + .form-translate__lable {
   background-color: #e2e8ea;
-}
-
-.form-translate__radio:checked + .form-translate__lable {
-  outline: none;
-  border-radius: 5px;
-  border: 7px solid #76a7e1;
-}
-
-.form-translate__radio:checked + .form-translate__lable::before,
-.form-translate__radio:focus + .form-translate__lable::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  -webkit-transform: translate(50%, -50%);
-          transform: translate(50%, -50%);
-  background: url(../icons/check.svg) 0 0/cover no-repeat;
-  border: 7px solid #76a7e1;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
 }
 
 .form-translate__img {
@@ -667,6 +665,10 @@ body {
           align-items: center;
 }
 
+.lang__rubbish {
+  padding-left: 5px;
+}
+
 .lang__add {
   margin-left: 20px;
   height: 40px;
@@ -684,4 +686,77 @@ body {
 
 .lang__add:hover {
   background-color: #e2e8ea;
+}
+
+.tone {
+  margin-top: 60px;
+}
+
+.tone__title::after {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  width: 40px;
+  color: #9a9fbd;
+  border: 2px solid #9a9fbd;
+  border-radius: 50%;
+}
+
+.tone__choice {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 30%;
+          flex: 0 1 30%;
+}
+
+.tone__choice-block {
+  width: 200px;
+  height: 60px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.tone__radio {
+  position: absolute;
+  opacity: 0;
+  width: 200px;
+  height: 60px;
+}
+
+.tone__lable {
+  width: 200px;
+  height: 60px;
+}
+
+.tone__radio:hover + .tone__lable {
+  background-color: #e2e8ea;
+}
+
+.tone__img {
+  padding-right: 10px;
+}
+
+.tone__text {
+  font-size: 16px;
+  color: #6e768f;
 }
