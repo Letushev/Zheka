@@ -545,7 +545,7 @@ body {
 
 .tone {
 	margin-top: 60px;
-	flex: 0 1 50%;
+	flex: 0 1 40%;
 	&__title {
 		@extend %fieldset-title-style;
 	}
@@ -608,9 +608,10 @@ body {
 
 .urgent {
 	margin-top: 60px;
-	flex: 0 1 50%;
+	flex: 0 1 60%;
 	&__title {
 		@extend %fieldset-title-style;
+		margin-left: 130px;
 	}
 
 	&__title::after {
@@ -620,14 +621,15 @@ body {
 	&__range {
 		-webkit-appearance: none;
 		width: 100%;
-		margin: 50px auto;
+		margin: 80px auto 15px;
+		padding: 0px 30px;
 		position: relative;
 	}
 
 	&__range::before {
 		content: "";
 		position: absolute;
-		left: 0;
+		left: 26px;
 		width: 8px;
 		height: 8px;
 		border-radius: 50%;
@@ -637,7 +639,7 @@ body {
 	&__range::after {
 		content: "";
 		position: absolute;
-		right: 0;
+		right: 26px;
 		width: 8px;
 		height: 8px;
 		border-radius: 50%;
@@ -686,5 +688,59 @@ body {
 		cursor: pointer;
 		-webkit-appearance: none;
 		margin-top: -9px;
+	}
+
+	&__point-item {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__point {
+		font-size: $fs-text;
+		color: $m-gray;
+		text-transform: uppercase;
+	}
+
+	&__point--orange {
+		color: #edbe76;
+	}
+
+	&__timeline-item {
+		padding: 30px 50px 30px 100px;
+		margin-top: 50px;
+		border: 1px solid $l-gray;
+		border-radius: 5px;
+	}
+
+	&__timeline-title {
+		color: $d-gray;
+		font-size: $fs-middle;
+		letter-spacing: 1px;
+		font-weight: bold;
+		text-transform: uppercase;
+		position: relative;
+		padding-bottom: 30px;
+	}
+
+	&__timeline-title::before {
+		content: "";
+		position: absolute;
+		left: -50px;
+		top: -8px;
+		background: url(../icons/info.svg) 100% repeat;
+		width: 30px;
+		height: 30px;
+	}
+
+	&__timeline-text {
+		font-size: $fs-text;
+		color: $m-gray;
+		line-height: 20px;
+	}
+
+	&__timeline-span {
+		color: #edbe76;
+		font-weight: bold;
+		text-transform: uppercase;
 	}
 }

@@ -697,8 +697,8 @@ body {
 .tone {
   margin-top: 60px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
 }
 
 .tone__title::after {
@@ -770,8 +770,12 @@ body {
 .urgent {
   margin-top: 60px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+}
+
+.urgent__title {
+  margin-left: 130px;
 }
 
 .urgent__title::after {
@@ -800,14 +804,15 @@ body {
 .urgent__range {
   -webkit-appearance: none;
   width: 100%;
-  margin: 50px auto;
+  margin: 80px auto 15px;
+  padding: 0px 30px;
   position: relative;
 }
 
 .urgent__range::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: 26px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -817,7 +822,7 @@ body {
 .urgent__range::after {
   content: "";
   position: absolute;
-  right: 0;
+  right: 26px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -866,4 +871,62 @@ body {
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -9px;
+}
+
+.urgent__point-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.urgent__point {
+  font-size: 12px;
+  color: #9a9fbd;
+  text-transform: uppercase;
+}
+
+.urgent__point--orange {
+  color: #edbe76;
+}
+
+.urgent__timeline-item {
+  padding: 30px 50px 30px 100px;
+  margin-top: 50px;
+  border: 1px solid #bbc6de;
+  border-radius: 5px;
+}
+
+.urgent__timeline-title {
+  color: #6e768f;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.urgent__timeline-title::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: -8px;
+  background: url(../icons/info.svg) 100% repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.urgent__timeline-text {
+  font-size: 12px;
+  color: #9a9fbd;
+  line-height: 20px;
+}
+
+.urgent__timeline-span {
+  color: #edbe76;
+  font-weight: bold;
+  text-transform: uppercase;
 }
