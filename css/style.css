@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-.upload__title, .lang__title, .tone__title, .urgent__title {
+.upload__title, .lang__title, .tone__title, .urgent__title, .sign__title {
   font-size: 20px;
   color: #6e768f;
   font-weight: bold;
@@ -133,10 +133,31 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  font-size: 12px;
+  font-size: 13px;
   text-transform: uppercase;
   font-weight: bold;
   color: #9a9fbd;
+}
+
+.sign__name-title, .sign__email-title, .sign__password-title {
+  font-size: 16px;
+  color: #6e768f;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+}
+
+.sign__name-input, .sign__email-input, .sign__password-input {
+  height: 50px;
+  width: 250px;
+  padding-left: 15px;
+  border: 1px solid #bbc6de;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #6e768f;
+}
+
+.sign__password-input:invalid, .sign__email-input:invalid, .sign__name-input:invalid {
+  border: 3px solid red;
 }
 
 body {
@@ -165,7 +186,7 @@ body {
 
 .header__back, .header__sign {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 13px;
   color: #9a9fbd;
 }
 
@@ -254,7 +275,7 @@ body {
 
 .main-list__title {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: bold;
   letter-spacing: 1px;
   color: #6e768f;
@@ -262,7 +283,7 @@ body {
 }
 
 .main-list__text {
-  font-size: 12px;
+  font-size: 13px;
   color: #6e768f;
   font-weight: bold;
   font-weight: lighter;
@@ -318,7 +339,7 @@ body {
 
 .main-help__subtitle {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: bold;
   color: #6e768f;
 }
@@ -330,7 +351,7 @@ body {
 
 .main-help__text {
   color: #bbc6de;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 20px;
 }
 
@@ -343,7 +364,7 @@ body {
 }
 
 .main-help__phone, .main-help__email {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: bold;
   color: #6e768f;
 }
@@ -446,7 +467,7 @@ body {
 .upload__title::after {
   content: "(Doc, Docx, Text, PDF, Markdown)";
   padding-left: 10px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: lighter;
   color: #6e768f;
 }
@@ -487,7 +508,7 @@ body {
 }
 
 .upload__info-title {
-  font-size: 12px;
+  font-size: 13px;
   text-transform: uppercase;
   color: #6e768f;
   font-weight: bold;
@@ -506,7 +527,7 @@ body {
 
 .upload__info-text {
   color: #9a9fbd;
-  font-size: 12px;
+  font-size: 13px;
   display: inline-block;
 }
 
@@ -883,7 +904,7 @@ body {
 }
 
 .urgent__point {
-  font-size: 12px;
+  font-size: 13px;
   color: #9a9fbd;
   text-transform: uppercase;
 }
@@ -920,7 +941,7 @@ body {
 }
 
 .urgent__timeline-text {
-  font-size: 12px;
+  font-size: 13px;
   color: #9a9fbd;
   line-height: 20px;
 }
@@ -929,4 +950,94 @@ body {
   color: #edbe76;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.sign {
+  margin-top: 60px;
+}
+
+.sign__title::after {
+  content: "5";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  width: 40px;
+  color: #9a9fbd;
+  border: 2px solid #9a9fbd;
+  border-radius: 50%;
+}
+
+.sign__subtitle {
+  padding-top: 40px;
+  font-size: 13px;
+  color: #9a9fbd;
+  font-weight: bold;
+}
+
+.sign__subtitle-link {
+  color: #9a9fbd;
+  text-decoration: underline;
+}
+
+.sign__name {
+  padding-top: 40px;
+}
+
+.sign__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sign__email {
+  padding-top: 30px;
+  padding-right: 20px;
+}
+
+.sign__password {
+  padding-top: 30px;
+}
+
+.sign__password-input {
+  letter-spacing: 5px;
+}
+
+.sign__password-input::-webkit-input-placeholder, .sign__email-input::-webkit-input-placeholder, .sign__name-input::-webkit-input-placeholder {
+  letter-spacing: 1px;
+  font-size: 13px;
+  color: #6e768f;
+}
+
+.sign__password-input:-ms-input-placeholder, .sign__email-input:-ms-input-placeholder, .sign__name-input:-ms-input-placeholder {
+  letter-spacing: 1px;
+  font-size: 13px;
+  color: #6e768f;
+}
+
+.sign__password-input::-ms-input-placeholder, .sign__email-input::-ms-input-placeholder, .sign__name-input::-ms-input-placeholder {
+  letter-spacing: 1px;
+  font-size: 13px;
+  color: #6e768f;
+}
+
+.sign__password-input::placeholder, .sign__email-input::placeholder, .sign__name-input::placeholder {
+  letter-spacing: 1px;
+  font-size: 13px;
+  color: #6e768f;
+}
+
+.sign__password-input:focus, .sign__email-input:focus, .sign__name-input:focus {
+  outline: none;
 }

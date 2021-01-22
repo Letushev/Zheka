@@ -5,7 +5,7 @@ $l-gray: #bbc6de;
 $m-gray: #9a9fbd;
 $d-gray: #6e768f;
 $hov-gray: #e2e8ea;
-$fs-text: 12px;
+$fs-text: 13px;
 $fs-middle: 16px;
 $fs-title: 20px;
 
@@ -65,6 +65,27 @@ $fs-title: 20px;
 	color: $m-gray;
 }
 
+%sign-title {
+	font-size: $fs-middle;
+	color: $d-gray;
+	text-transform: uppercase;
+	padding-bottom: 8px;
+}
+
+%sign-input {
+	height: 50px;
+	width: 250px;
+	padding-left: 15px;
+	border: 1px solid $l-gray;
+	border-radius: 5px;
+	font-size: $fs-title;
+	color: $d-gray;
+}
+
+%sign-input-invalid {
+	border: 3px solid red;
+}
+
 @mixin fieldset-title-num($num-t) {
 	content: $num-t;
 	position: absolute;
@@ -79,6 +100,11 @@ $fs-title: 20px;
 	color: $m-gray;
 	border: 2px solid $m-gray;
 	border-radius: 50%;
+}
+
+@mixin input-checked ($cheked-img) {
+	content: '';
+
 }
 
 body {
@@ -742,5 +768,90 @@ body {
 		color: #edbe76;
 		font-weight: bold;
 		text-transform: uppercase;
+	}
+}
+
+.sign {
+	margin-top: 60px;
+	&__title {
+		@extend %fieldset-title-style;
+	}
+
+	&__title::after {
+		@include fieldset-title-num("5");
+	}
+
+	&__subtitle {
+		padding-top: 40px;
+		font-size: $fs-text;
+		color: $m-gray;
+		font-weight: bold;
+	}
+
+	&__subtitle-link {
+		color: $m-gray;
+		text-decoration: underline;
+	}
+
+	&__name {
+		padding-top: 40px;
+	}
+
+	&__name-title {
+		@extend %sign-title;
+	}
+
+	&__name-input {
+		@extend %sign-input;
+	}
+
+	&__item {
+		display: flex;
+	}
+
+	&__email {
+		padding-top: 30px;
+		padding-right: 20px;
+	}
+
+	&__email-title {
+		@extend %sign-title;
+	}
+
+	&__email-input {
+		@extend %sign-input;
+	}
+
+	&__password {
+		padding-top: 30px;
+	}
+
+	&__password-title {
+		@extend %sign-title;
+	}
+
+	&__password-input {
+		letter-spacing: 5px;
+		@extend %sign-input;
+	}
+
+	&__password-input:invalid,
+	&__email-input:invalid,
+	&__name-input:invalid{
+		@extend %sign-input-invalid;
+	}
+
+	&__password-input::placeholder,
+	&__email-input::placeholder,
+	&__name-input::placeholder {
+		letter-spacing: 1px;
+		font-size: $fs-text;
+		color: $d-gray;
+	}
+
+	&__password-input:focus,
+	&__email-input:focus,
+	&__name-input:focus {
+		outline: none;
 	}
 }
