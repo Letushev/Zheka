@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #f7f7fa;
 }
 
-.form-translate__lable, .tone__lable {
+.form-translate__lable, .tone__lable, .sign__lable {
   border: 1px solid #bbc6de;
   border-radius: 5px;
   display: -webkit-box;
@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f7f7fa;
 }
 
-.form-translate__radio:focus + .form-translate__lable, .form-translate__radio:checked + .form-translate__lable, .tone__radio:focus + .tone__lable, .tone__radio:checked + .tone__lable {
+.form-translate__radio:focus + .form-translate__lable, .form-translate__radio:checked + .form-translate__lable, .tone__radio:focus + .tone__lable, .tone__radio:checked + .tone__lable, .sign__radio:focus + .sign__lable, .sign__radio:checked + .sign__lable {
   outline: none;
   border-radius: 5px;
   border: 5px solid #76a7e1;
@@ -111,7 +111,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-translate__radio:checked + .form-translate__lable::after,
 .form-translate__radio:focus + .form-translate__lable::after, .tone__radio:checked + .tone__lable::after,
-.tone__radio:focus + .tone__lable::after {
+.tone__radio:focus + .tone__lable::after, .sign__radio:checked + .sign__lable::after,
+.sign__radio:focus + .sign__lable::after {
   content: "";
   position: absolute;
   top: 0;
@@ -156,8 +157,19 @@ h1, h2, h3, h4, h5, h6 {
   color: #6e768f;
 }
 
-.sign__password-input:invalid, .sign__email-input:invalid, .sign__name-input:invalid {
-  border: 3px solid red;
+.sign__email-input:valid + .sign__email-lable::after,
+.sign__name-input:valid + .sign__name-lable::after,
+.sign__password-input:valid + .sign__password-lable::after, .sign__email-input:invalid + .sign__email-lable::after,
+.sign__name-input:invalid + .sign__name-lable::after,
+.sign__password-input:invalid + .sign__password-lable::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 0px;
+  right: 15px;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
 }
 
 body {
@@ -1014,6 +1026,24 @@ body {
   letter-spacing: 5px;
 }
 
+.sign__email-input:valid + .sign__email-lable::after,
+.sign__name-input:valid + .sign__name-lable::after,
+.sign__password-input:valid + .sign__password-lable::after {
+  background: url(../icons/sign-check-true.svg) 0 0/100% no-repeat;
+}
+
+.sign__email-input:invalid + .sign__email-lable::after,
+.sign__name-input:invalid + .sign__name-lable::after,
+.sign__password-input:invalid + .sign__password-lable::after {
+  background: url(../icons/sign-check-false.svg) 0 0/100% no-repeat;
+}
+
+.sign__password-lable, .sign__email-lable, .sign__name-lable {
+  position: relative;
+  border: none;
+  width: 0;
+}
+
 .sign__password-input::-webkit-input-placeholder, .sign__email-input::-webkit-input-placeholder, .sign__name-input::-webkit-input-placeholder {
   letter-spacing: 1px;
   font-size: 13px;
@@ -1040,4 +1070,35 @@ body {
 
 .sign__password-input:focus, .sign__email-input:focus, .sign__name-input:focus {
   outline: none;
+}
+
+.sign__choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 60px 0px;
+}
+
+.sign__choice-block {
+  position: relative;
+}
+
+.sign__choice-block + .sign__choice-block {
+  padding-left: 40px;
+}
+
+.sign__radio {
+  position: absolute;
+  opacity: 0;
+  width: 250px;
+  height: 200px;
+}
+
+.sign__lable {
+  width: 250px;
+  height: 200px;
+}
+
+.sign__radio:hover + .sign__lable {
+  background-color: #e2e8ea;
 }

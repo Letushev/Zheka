@@ -82,8 +82,14 @@ $fs-title: 20px;
 	color: $d-gray;
 }
 
-%sign-input-invalid {
-	border: 3px solid red;
+%input-checked {
+	content: "";
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	top: 0px;
+	right: 15px;
+	transform: translate(0%, 0%);
 }
 
 @mixin fieldset-title-num($num-t) {
@@ -100,11 +106,6 @@ $fs-title: 20px;
 	color: $m-gray;
 	border: 2px solid $m-gray;
 	border-radius: 50%;
-}
-
-@mixin input-checked ($cheked-img) {
-	content: '';
-
 }
 
 body {
@@ -835,10 +836,26 @@ body {
 		@extend %sign-input;
 	}
 
-	&__password-input:invalid,
-	&__email-input:invalid,
-	&__name-input:invalid{
-		@extend %sign-input-invalid;
+	&__email-input:valid + &__email-lable::after,
+	&__name-input:valid + &__name-lable::after,
+	&__password-input:valid + &__password-lable::after {
+		@extend %input-checked;
+		background: url(../icons/sign-check-true.svg) 0 0/ 100% no-repeat;
+	}
+
+	&__email-input:invalid + &__email-lable::after,
+	&__name-input:invalid + &__name-lable::after,
+	&__password-input:invalid + &__password-lable::after {
+		@extend %input-checked;
+		background: url(../icons/sign-check-false.svg) 0 0/ 100% no-repeat;
+	}
+
+	&__password-lable,
+	&__email-lable,
+	&__name-lable {
+		position: relative;
+		border: none;
+		width: 0;
 	}
 
 	&__password-input::placeholder,
@@ -853,5 +870,49 @@ body {
 	&__email-input:focus,
 	&__name-input:focus {
 		outline: none;
+	}
+
+	&__choice {
+		display: flex;
+		padding: 60px 0px;
+	}
+
+	&__choice-block {
+		position: relative;
+	}
+
+	&__choice-block + &__choice-block{
+		padding-left: 40px;
+
+	}
+
+	&__radio {
+		position: absolute;
+		opacity: 0;
+		width: 250px;
+		height: 200px;
+	}
+
+	&__lable {
+		@extend %radio-lable;
+		width: 250px;
+		height: 200px;
+	}
+
+	&__radio:focus + &__lable {
+		@extend %radio_focus-cheked;
+	}
+
+	&__radio:checked + &__lable {
+		@extend %radio_focus-cheked;
+	}
+
+	&__radio:hover + &__lable {
+		background-color: $hov-gray;
+	}
+
+	&__radio:checked + &__lable::after,
+	&__radio:focus + &__lable::after {
+		@extend %radio-after;
 	}
 }

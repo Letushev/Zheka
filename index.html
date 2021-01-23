@@ -314,18 +314,79 @@
 							</p>
 							<div class="sign__name">
 								<p class="sign__name-title">Full name</p>
-								<input class="sign__name-input" type="text" placeholder="Fedor Vasya">
+								<div class="sign__name-input-item">
+									<input class="sign__name-input" type="text" placeholder="Fedor Vasya"
+										id="sign__name-input-id">
+									<lable class="sign__name-lable" for="sign__name-input-id"></lable>
+								</div>
 							</div>
 							<div class="sign__item">
-							<div class="sign__email">
-								<p class="sign__email-title">Email adress</p>
-								<input class="sign__email-input" type="email" placeholder="fedor@hast.pum">
+								<div class="sign__email">
+									<p class="sign__email-title">Email adress</p>
+									<div class="sign__email-input-item">
+										<input class="sign__email-input" type="email" placeholder="fedor@hast.pum"
+											id="sign__email-input-id">
+										<lable class="sign__email-lable" for="sign__email-input-id"></lable>
+									</div>
+								</div>
+								<div class="sign__password">
+									<p class="sign__password-title">Choose a password</p>
+									<div class="sign__password-input-item">
+										<input class="sign__password-input" type="password" placeholder="FdpP234xld"
+											id="sign__password-input-id" pattern=".{8,}">
+										<lable class="sign__password-lable" for="sign__password-input-id"></lable>
+									</div>
+								</div>
 							</div>
-							<div class="sign__password">
-								<p class="sign__password-title">Choose a password</p>
-								<input class="sign__password-input" type="password" placeholder="FdpP234xld">
+
+							<div class="sign__choice">
+								<div class="sign__choice-block">
+									<input type="radio" name="sign" class="sign__radio" id="sign__radiod1">
+									<lable class="sign__lable" for="sign__radiod1">
+										<img src="icons/mastercard.svg" alt="#">
+									</lable>
+								</div>
+								<div class="sign__choice-block">
+									<input type="radio" name="sign" class="sign__radio" id="sign__radiod2">
+									<lable class="sign__lable" for="sign__radiod2">
+										<img src="icons/paypal.svg" alt="#">
+									</lable>
+								</div>
+								<div class="sign__choice-block">
+									<input type="radio" name="sign" class="sign__radio" id="sign__radiod3">
+									<lable class="sign__lable" for="sign__radiod3">
+										<img src="icons/visa.svg" alt="#">
+									</lable>
+								</div>
 							</div>
-						</div>
+
+							<div class="sign__card">
+								<div class="sign__card-block">
+									<p class="sign__card-numb-title">Card number</p>
+									<div class="sign__card-numb-input-item">
+										<input class="sign__card-numb-input" type="card-numb" id="sign__card-numb-input-id"
+											pattern="\d{4}\s\d{4}\s\d{4}\s\d{4}">
+										<lable class="sign__card-numb-lable" for="sign__card-numb-input-id"></lable>
+									</div>
+								</div>
+								<div class="sign__card-block">
+									<p class="sign__card-numb-title">Expiry data</p>
+									<div class="sign__card-numb-input-item">
+										<input class="sign__card-numb-input" type="card-numb" id="sign__card-numb-input-id"
+											pattern="\d{2}/\d{2}/\d{2}">
+										<lable class="sign__card-numb-lable" for="sign__card-numb-input-id"></lable>
+									</div>
+								</div>
+								<div class="sign__card-block">
+									<p class="sign__card-numb-title">Code</p>
+									<div class="sign__card-numb-input-item">
+										<input class="sign__card-numb-input" type="card-numb" id="sign__card-numb-input-id"
+											pattern="\d{3}">
+										<lable class="sign__card-numb-lable" for="sign__card-numb-input-id"></lable>
+									</div>
+								</div>
+							</div>
+
 						</fieldset>
 
 					</div>
