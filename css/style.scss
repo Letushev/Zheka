@@ -881,22 +881,21 @@ body {
 		position: relative;
 	}
 
-	&__choice-block + &__choice-block{
+	&__choice-block + &__choice-block {
 		padding-left: 40px;
-
 	}
 
 	&__radio {
 		position: absolute;
 		opacity: 0;
 		width: 250px;
-		height: 200px;
+		height: 150px;
 	}
 
 	&__lable {
 		@extend %radio-lable;
 		width: 250px;
-		height: 200px;
+		height: 150px;
 	}
 
 	&__radio:focus + &__lable {
@@ -915,4 +914,68 @@ body {
 	&__radio:focus + &__lable::after {
 		@extend %radio-after;
 	}
+
+	&__card {
+		display: flex;
+	}
+
+	&__card-block + &__card-block{
+		padding-left: 30px;
+	}
+
+	&__card-numb-title,
+	&__card-data-title,
+	&__card-code-title {
+		@extend %sign-title;
+	}
+
+	&__card-numb-input,
+	&__card-data-input,
+	&__card-code-input {
+		@extend %sign-input;
+	}
+
+	&__card-numb-input {
+		width: 400px;
+	}
+	&__card-data-input {
+		width: 200px;
+	}
+	&__card-code-input {
+		width: 100px;
+	}
+
+	&__card-numb-input:focus,
+	&__card-data-input:focus,
+	&__card-code-input:focus {
+		outline: none;
+	}
+
+	&__card-numb-input-item{
+		position: relative;
+	}
+	&__card-numb-lable::after {
+		content: "VISA";
+		color: white;
+		background-color: $m-gray;
+		padding: 5px 8px;
+		border-radius: 5px;
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		transform: translate(0%, -50%);
+	}
+
+	&__card-data-input::placeholder {
+		letter-spacing: 1px;
+		font-size: $fs-text;
+		color: $d-gray;
+	}
+
+	&__card-numb-input:invalid,
+	&__card-data-input:invalid,
+	&__card-code-input:invalid {
+		border: 1px solid red;
+	}
+
 }

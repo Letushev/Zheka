@@ -140,14 +140,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #9a9fbd;
 }
 
-.sign__name-title, .sign__email-title, .sign__password-title {
+.sign__name-title, .sign__email-title, .sign__password-title, .sign__card-numb-title, .sign__card-data-title, .sign__card-code-title {
   font-size: 16px;
   color: #6e768f;
   text-transform: uppercase;
   padding-bottom: 8px;
 }
 
-.sign__name-input, .sign__email-input, .sign__password-input {
+.sign__name-input, .sign__email-input, .sign__password-input, .sign__card-numb-input, .sign__card-data-input, .sign__card-code-input {
   height: 50px;
   width: 250px;
   padding-left: 15px;
@@ -1091,14 +1091,85 @@ body {
   position: absolute;
   opacity: 0;
   width: 250px;
-  height: 200px;
+  height: 150px;
 }
 
 .sign__lable {
   width: 250px;
-  height: 200px;
+  height: 150px;
 }
 
 .sign__radio:hover + .sign__lable {
   background-color: #e2e8ea;
+}
+
+.sign__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sign__card-block + .sign__card-block {
+  padding-left: 30px;
+}
+
+.sign__card-numb-input {
+  width: 400px;
+}
+
+.sign__card-data-input {
+  width: 200px;
+}
+
+.sign__card-code-input {
+  width: 100px;
+}
+
+.sign__card-numb-input:focus, .sign__card-data-input:focus, .sign__card-code-input:focus {
+  outline: none;
+}
+
+.sign__card-numb-input-item {
+  position: relative;
+}
+
+.sign__card-numb-lable::after {
+  content: "VISA";
+  color: white;
+  background-color: #9a9fbd;
+  padding: 5px 8px;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+}
+
+.sign__card-data-input::-webkit-input-placeholder {
+  letter-spacing: 1px;
+  font-size: 13px;
+  color: #6e768f;
+}
+
+.sign__card-data-input:-ms-input-placeholder {
+  letter-spacing: 1px;
+  font-size: 13px;
+  color: #6e768f;
+}
+
+.sign__card-data-input::-ms-input-placeholder {
+  letter-spacing: 1px;
+  font-size: 13px;
+  color: #6e768f;
+}
+
+.sign__card-data-input::placeholder {
+  letter-spacing: 1px;
+  font-size: 13px;
+  color: #6e768f;
+}
+
+.sign__card-numb-input:invalid, .sign__card-data-input:invalid, .sign__card-code-input:invalid {
+  border: 1px solid red;
 }
