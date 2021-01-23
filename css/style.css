@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-.header__back, .header__sign, .main-btns__order, .main-btns__print, .upload__lable {
+.header__back, .header__sign, .main-btns__order, .main-btns__print, .upload__lable, .agree__btns-order, .agree__btns-print {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1172,4 +1172,62 @@ body {
 
 .sign__card-numb-input:invalid, .sign__card-data-input:invalid, .sign__card-code-input:invalid {
   border: 1px solid red;
+}
+
+.agree {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-top: 70px;
+}
+
+.agree__checkbox-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 40px;
+}
+
+.agree__checkbox {
+  border: 1px solid #bbc6de;
+}
+
+.agree__lable {
+  color: #6e768f;
+  font-size: 13px;
+  padding-left: 10px;
+}
+
+.agree__lable span {
+  text-decoration: underline;
+}
+
+.agree__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.agree__btns-order, .agree__btns-print {
+  width: 180px;
+  text-transform: uppercase;
+  color: #9a9fbd;
+  letter-spacing: 1px;
+  font-weight: bold;
+  background: #f7f7fa;
+}
+
+.agree__btns-order:hover, .agree__btns-print:hover {
+  color: white;
+  background: #5fcac6;
+}
+
+.agree__btns-order {
+  margin-right: 20px;
 }

@@ -919,7 +919,7 @@ body {
 		display: flex;
 	}
 
-	&__card-block + &__card-block{
+	&__card-block + &__card-block {
 		padding-left: 30px;
 	}
 
@@ -951,7 +951,7 @@ body {
 		outline: none;
 	}
 
-	&__card-numb-input-item{
+	&__card-numb-input-item {
 		position: relative;
 	}
 	&__card-numb-lable::after {
@@ -977,5 +977,55 @@ body {
 	&__card-code-input:invalid {
 		border: 1px solid red;
 	}
+}
 
+.agree {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 70px;
+
+	&__checkbox-item {
+		display: flex;
+		align-items: center;
+		padding-right: 40px;
+	}
+
+	&__checkbox {
+		border: 1px solid $l-gray;
+	}
+
+	&__lable {
+		color: $d-gray;
+		font-size: $fs-text;
+		padding-left: 10px;
+	}
+
+	&__lable span {
+		text-decoration: underline;
+	}
+
+	&__btns {
+		display: flex;
+	}
+
+	&__btns-order,
+	&__btns-print {
+		@extend %standart-btn;
+		width: 180px;
+		text-transform: uppercase;
+		color: $m-gray;
+		letter-spacing: 1px;
+		font-weight: bold;
+		background: $bg-gray;
+	}
+
+	&__btns-order:hover,
+	&__btns-print:hover {
+		color: white;
+		background: #5fcac6;
+	}
+
+	&__btns-order {
+		margin-right: 20px;
+	}
 }
