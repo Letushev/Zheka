@@ -140,6 +140,12 @@ body {
 		text-decoration: underline;
 	}
 
+	&__back:focus,
+	&__sign:focus {
+		outline: none;
+		border: 1px solid $d-gray;
+	}
+
 	&__back-icon,
 	&__sign-icon {
 		padding-right: 8px;
@@ -244,6 +250,12 @@ body {
 	&__print:hover {
 		color: white;
 		background: #5fcac6;
+	}
+
+	&__order:focus,
+	&__print:focus {
+		outline: none;
+		border: 1px solid $d-gray;
 	}
 
 	&__order {
@@ -357,8 +369,7 @@ body {
 		background-color: $hov-gray;
 	}
 
-	&__radio:checked + &__lable::after,
-	&__radio:focus + &__lable::after {
+	&__radio:checked + &__lable::after {
 		@extend %radio-after;
 	}
 
@@ -400,6 +411,11 @@ body {
 	&__lable {
 		@extend %standart-btn;
 		width: 230px;
+	}
+
+	&__file:focus + &__lable {
+		outline: none;
+		border: 1px solid $d-gray;
 	}
 
 	&__lable:hover {
@@ -530,6 +546,7 @@ body {
 
 	&__select:focus {
 		outline: none;
+		border: 1px solid $d-gray;
 	}
 
 	&__to {
@@ -564,6 +581,11 @@ body {
 		text-align: center;
 		background-color: $bg-gray;
 		width: 120px;
+	}
+
+	&__add:focus {
+		outline: none;
+		border: 1px solid $d-gray;
 	}
 
 	&__add:hover {
@@ -619,8 +641,7 @@ body {
 		background-color: $hov-gray;
 	}
 
-	&__radio:checked + &__lable::after,
-	&__radio:focus + &__lable::after {
+	&__radio:checked + &__lable::after {
 		@extend %radio-after;
 	}
 
@@ -851,6 +872,13 @@ body {
 		background: url(../icons/sign-check-false.svg) 0 0/ 100% no-repeat;
 	}
 
+	&__email-input:focus,
+	&__name-input:focus,
+	&__password-input:focus {
+		outline: none;
+		border: 1px solid $d-gray;
+	}
+
 	&__password-lable,
 	&__email-lable,
 	&__name-lable {
@@ -911,8 +939,7 @@ body {
 		background-color: $hov-gray;
 	}
 
-	&__radio:checked + &__lable::after,
-	&__radio:focus + &__lable::after {
+	&__radio:checked + &__lable::after {
 		@extend %radio-after;
 	}
 
@@ -934,6 +961,13 @@ body {
 	&__card-data-input,
 	&__card-code-input {
 		@extend %sign-input;
+	}
+
+	&__card-numb-input:focus,
+	&__card-data-input:focus,
+	&__card-code-input:focus {
+		outline: none;
+		border: 1px solid $d-gray;
 	}
 
 	&__card-numb-input {
@@ -995,6 +1029,11 @@ body {
 		border: 1px solid $l-gray;
 	}
 
+	&__checkbox:focus {
+		outline: none;
+		border: 1px solid $d-gray;
+	}
+
 	&__lable {
 		color: $d-gray;
 		font-size: $fs-text;
@@ -1024,6 +1063,12 @@ body {
 	&__btns-print:hover {
 		color: white;
 		background: #5fcac6;
+	}
+
+	&__btns-order:focus,
+	&__btns-print:focus {
+		outline: none;
+		border: 1px solid $d-gray;
 	}
 
 	&__btns-order {
@@ -1126,15 +1171,15 @@ body {
 		height: 16px;
 	}
 
-	&__connect-facebook::before{
+	&__connect-facebook::before {
 		background: url(../icons/facebook.svg) 0 0/ 100% no-repeat;
 	}
 
-	&__connect-twitter::before{
+	&__connect-twitter::before {
 		background: url(../icons/twitter.svg) 0 0/ 100% no-repeat;
 	}
 
-	&__connect-linkedin::before{
+	&__connect-linkedin::before {
 		background: url(../icons/linkedin.svg) 0 0/ 100% no-repeat;
 	}
 

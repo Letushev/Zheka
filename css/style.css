@@ -109,10 +109,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 5px solid #76a7e1;
 }
 
-.form-translate__radio:checked + .form-translate__lable::after,
-.form-translate__radio:focus + .form-translate__lable::after, .tone__radio:checked + .tone__lable::after,
-.tone__radio:focus + .tone__lable::after, .sign__radio:checked + .sign__lable::after,
-.sign__radio:focus + .sign__lable::after {
+.form-translate__radio:checked + .form-translate__lable::after, .tone__radio:checked + .tone__lable::after, .sign__radio:checked + .sign__lable::after {
   content: "";
   position: absolute;
   top: 0;
@@ -204,6 +201,11 @@ body {
 
 .header__back:hover, .header__sign:hover {
   text-decoration: underline;
+}
+
+.header__back:focus, .header__sign:focus {
+  outline: none;
+  border: 1px solid #6e768f;
 }
 
 .header__back-icon, .header__sign-icon {
@@ -330,6 +332,11 @@ body {
 .main-btns__order:hover, .main-btns__print:hover {
   color: white;
   background: #5fcac6;
+}
+
+.main-btns__order:focus, .main-btns__print:focus {
+  outline: none;
+  border: 1px solid #6e768f;
 }
 
 .main-btns__order {
@@ -500,6 +507,11 @@ body {
 
 .upload__lable {
   width: 230px;
+}
+
+.upload__file:focus + .upload__lable {
+  outline: none;
+  border: 1px solid #6e768f;
 }
 
 .upload__lable:hover {
@@ -687,6 +699,7 @@ body {
 
 .lang__select:focus {
   outline: none;
+  border: 1px solid #6e768f;
 }
 
 .lang__to {
@@ -725,6 +738,11 @@ body {
   text-align: center;
   background-color: #f7f7fa;
   width: 120px;
+}
+
+.lang__add:focus {
+  outline: none;
+  border: 1px solid #6e768f;
 }
 
 .lang__add:hover {
@@ -1042,6 +1060,11 @@ body {
   background: url(../icons/sign-check-false.svg) 0 0/100% no-repeat;
 }
 
+.sign__email-input:focus, .sign__name-input:focus, .sign__password-input:focus {
+  outline: none;
+  border: 1px solid #6e768f;
+}
+
 .sign__password-lable, .sign__email-lable, .sign__name-lable {
   position: relative;
   border: none;
@@ -1115,6 +1138,11 @@ body {
 
 .sign__card-block + .sign__card-block {
   padding-left: 30px;
+}
+
+.sign__card-numb-input:focus, .sign__card-data-input:focus, .sign__card-code-input:focus {
+  outline: none;
+  border: 1px solid #6e768f;
 }
 
 .sign__card-numb-input {
@@ -1202,6 +1230,11 @@ body {
   border: 1px solid #bbc6de;
 }
 
+.agree__checkbox:focus {
+  outline: none;
+  border: 1px solid #6e768f;
+}
+
 .agree__lable {
   color: #6e768f;
   font-size: 13px;
@@ -1230,6 +1263,11 @@ body {
 .agree__btns-order:hover, .agree__btns-print:hover {
   color: white;
   background: #5fcac6;
+}
+
+.agree__btns-order:focus, .agree__btns-print:focus {
+  outline: none;
+  border: 1px solid #6e768f;
 }
 
 .agree__btns-order {

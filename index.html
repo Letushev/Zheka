@@ -13,14 +13,14 @@
 		<div class="container">
 			<div class="header__item">
 
-				<button class="header__back">
+				<button class="header__back" tabindex="1">
 					<img src="icons/back.svg" alt="#" class="header__back-icon">
 					<p>Go back</p>
 				</button>
 
 				<img src="icons/logo.svg" alt="#" class="header__logo-icon">
 
-				<button class="header__sign">
+				<button class="header__sign" tabindex="2">
 					<img src="icons/sign.svg" alt="#" class="header__sign-icon">
 					<p>Sign in</p>
 				</button>
@@ -62,8 +62,8 @@
 						</div>
 
 						<div class="main-btns">
-							<button class="main-btns__order">Place order</button>
-							<button class="main-btns__print">Print a quote</button>
+							<button class="main-btns__order" tabindex="3">Place order</button>
+							<button class="main-btns__print" tabindex="4">Print a quote</button>
 						</div>
 
 					</div>
@@ -104,8 +104,8 @@
 
 								<div class="form-translate__choice-block">
 
-									<input id="form-translate__radio1" name="form-translate" class="form-translate__radio"
-										type="radio" value="web" tabindex="1">
+									<input id="form-translate__radio1 " name="form-translate" class="form-translate__radio"
+										type="radio" value="web" tabindex="5">
 
 									<lable for="form-translate__radio1" class="form-translate__lable">
 										<img class="form-translate__img" src="icons/web.svg" alt="#">
@@ -117,7 +117,7 @@
 								<div class="form-translate__choice-block">
 
 									<input id="form-translate__radio2" name="form-translate" class="form-translate__radio"
-										type="radio" value="doc" tabindex="2">
+										type="radio" value="doc" tabindex="6">
 
 									<lable class="form-translate__lable" for="form-translate__radio2">
 										<img class="form-translate__img" src="icons/doc.svg" alt="#">
@@ -129,7 +129,7 @@
 								<div class="form-translate__choice-block">
 
 									<input class="form-translate__radio" type="radio" name="form-translate" value="acc"
-										id="form-translate__input3" tabindex="3">
+										id="form-translate__input3" tabindex="7">
 
 									<lable class="form-translate__lable" for="form-translate__input3">
 										<img class="form-translate__img" src="icons/acc.svg" alt="#">
@@ -149,7 +149,7 @@
 
 								<div class="upload__btn">
 
-									<input type="file" id="upload__file-id" class="upload__file">
+									<input type="file" id="upload__file-id" class="upload__file" tabindex="8">
 
 									<label for="upload__file-id" class="upload__lable">
 										<img src="icons/upload.svg" alt="#">
@@ -211,7 +211,7 @@
 								<div class="lang__from">
 									<p class="lang__from-text">from</p>
 									<div class="lang__select-item">
-										<select name="lang" class="lang__select">
+										<select name="lang" class="lang__select" tabindex="9">
 											<option value="en">English</option>
 											<option value="ar">Arabik</option>
 											<option value="uk">Ukrainian</option>
@@ -224,7 +224,7 @@
 									<p class="lang__to-text">to</p>
 									<div class="lang__to-item">
 										<div class="lang__select-item">
-											<select name="lang" class="lang__select">
+											<select name="lang" class="lang__select" tabindex="10">
 												<option value="en">English</option>
 												<option selected value="ar">Arabik</option>
 												<option value="uk">Ukrainian</option>
@@ -233,7 +233,7 @@
 											</select>
 										</div>
 										<div class="lang__select-item">
-											<select name="lang" class="lang__select">
+											<select name="lang" class="lang__select" tabindex="11">
 												<option value="en">English</option>
 												<option value="ar">Arabik</option>
 												<option value="uk">Ukrainian</option>
@@ -246,9 +246,9 @@
 											<img src="icons/delete.svg" alt="#">
 										</div>
 
-										<div class="lang__add">
+										<button class="lang__add" tabindex="12">
 											<p class="lang__add-text">+ Add</p>
-										</div>
+										</button>
 									</div>
 								</div>
 							</div>
@@ -260,7 +260,8 @@
 								<legend class="tone__title">Select your desired tone</legend>
 								<div class="tone__choice">
 									<div class="tone__choice-block">
-										<input id="tone__radio1" name="tone" class="tone__radio" type="radio" value="friendly">
+										<input id="tone__radio1" name="tone" class="tone__radio" type="radio" value="friendly"
+											tabindex="13">
 
 										<lable for="tone__radio1" class="tone__lable">
 											<img class="tone__img" src="icons/friendly.svg" alt="#">
@@ -269,7 +270,8 @@
 									</div>
 
 									<div class="tone__choice-block">
-										<input id="tone__radio2" name="tone" class="tone__radio" type="radio" value="corporate">
+										<input id="tone__radio2" name="tone" class="tone__radio" type="radio" value="corporate"
+											tabindex="14">
 
 										<lable for="tone__radio2" class="tone__lable">
 											<img class="tone__img" src="icons/corporate.svg" alt="#">
@@ -279,7 +281,8 @@
 
 									<div class="tone__choice-block">
 
-										<input id="tone__radio3" name="tone" class="tone__radio" type="radio" value="media">
+										<input id="tone__radio3" name="tone" class="tone__radio" type="radio" value="media"
+											tabindex="15">
 
 										<lable for="tone__radio3" class="tone__lable">
 											<img class="tone__img" src="icons/media.svg" alt="#">
@@ -292,7 +295,8 @@
 
 							<fieldset class="urgent">
 								<legend class="urgent__title">Tell us how urgent this job</legend>
-								<input type="range" min="0" max="100" value="50" name="urgent" step="1" class="urgent__range" />
+								<input type="range" min="0" max="100" value="50" name="urgent" step="1" class="urgent__range"
+									tabindex="16" />
 								<div class="urgent__point-item">
 									<p class="urgent__point">I got time</p>
 									<p class="urgent__point urgent__point--orange">Average</p>
@@ -315,7 +319,7 @@
 							<div class="sign__name">
 								<p class="sign__name-title">Full name</p>
 								<div class="sign__name-input-item">
-									<input class="sign__name-input" type="text" placeholder="Fedor Vasya"
+									<input class="sign__name-input" type="text" placeholder="Fedor Vasya" tabindex="17"
 										id="sign__name-input-id">
 									<lable class="sign__name-lable" for="sign__name-input-id"></lable>
 								</div>
@@ -324,7 +328,7 @@
 								<div class="sign__email">
 									<p class="sign__email-title">Email adress</p>
 									<div class="sign__email-input-item">
-										<input class="sign__email-input" type="email" placeholder="fedor@hast.pum"
+										<input class="sign__email-input" type="email" placeholder="fedor@hast.pum" tabindex="18"
 											id="sign__email-input-id">
 										<lable class="sign__email-lable" for="sign__email-input-id"></lable>
 									</div>
@@ -332,7 +336,7 @@
 								<div class="sign__password">
 									<p class="sign__password-title">Choose a password</p>
 									<div class="sign__password-input-item">
-										<input class="sign__password-input" type="password" placeholder="FdpP234xld"
+										<input class="sign__password-input" type="password" placeholder="FdpP234xld" tabindex="19"
 											id="sign__password-input-id" pattern=".{8,}">
 										<lable class="sign__password-lable" for="sign__password-input-id"></lable>
 									</div>
@@ -341,7 +345,7 @@
 
 							<div class="sign__choice">
 								<div class="sign__choice-block">
-									<input type="radio" name="sign" class="sign__radio" id="sign__radiod1">
+									<input type="radio" name="sign" class="sign__radio" tabindex="20" id="sign__radiod1">
 									<lable class="sign__lable" for="sign__radiod1">
 										<img src="icons/mastercard.svg" alt="#">
 									</lable>
@@ -365,7 +369,7 @@
 									<p class="sign__card-numb-title">Card number</p>
 									<div class="sign__card-numb-input-item">
 										<input class="sign__card-numb-input" type="text" id="sign__card-numb-input-id"
-											pattern="\d{4}\s\d{4}\s\d{4}\s\d{4}">
+											tabindex="21" pattern="\d{4}\s\d{4}\s\d{4}\s\d{4}">
 										<lable class="sign__card-numb-lable" for="sign__card-numb-input-id"></lable>
 									</div>
 								</div>
@@ -373,14 +377,14 @@
 									<p class="sign__card-data-title">Expiry data</p>
 									<div class="sign__card-data-input-item">
 										<input class="sign__card-data-input" type="text" id="sign__card-data-input-id"
-											pattern="\d{2}/\d{2}/\d{2}" placeholder="DD/MM/YY">
+											tabindex="22" pattern="\d{2}/\d{2}/\d{2}" placeholder="DD/MM/YY">
 									</div>
 								</div>
 								<div class="sign__card-block">
 									<p class="sign__card-code-title">Code</p>
 									<div class="sign__card-code-input-item">
-										<input class="sign__card-code-input" type="password" id="sign__card-code-input-id"
-											pattern="\d{3}">
+										<input class="sign__card-code-input" tabindex="23" type="password"
+											id="sign__card-code-input-id" pattern="\d{3}">
 									</div>
 								</div>
 							</div>
@@ -388,12 +392,13 @@
 
 						<fieldset class="agree">
 							<div class="agree__checkbox-item">
-								<input type="checkbox" name="agree" value="agree" id="agree__checkbox" class="agree__checkbox">
+								<input type="checkbox" name="agree" value="agree" id="agree__checkbox" class="agree__checkbox"
+									tabindex="24">
 								<lable class="agree__lable" for="agree__checkbox">I agree to the <span>Terms & Conditions</span>
 							</div>
 							<div class="agree__btns">
-								<button class="agree__btns-order">Place order</button>
-								<button class="agree__btns-print">Print a quote</button>
+								<button class="agree__btns-order" tabindex="25">Place order</button>
+								<button class="agree__btns-print" tabindex="26">Print a quote</button>
 							</div>
 							</lable>
 						</fieldset>
