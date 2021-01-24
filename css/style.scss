@@ -152,6 +152,7 @@ body {
 }
 
 .main {
+	padding-bottom: 100px;
 	&__item {
 		border: 1px solid $l-gray;
 		border-radius: 5px;
@@ -1027,5 +1028,120 @@ body {
 
 	&__btns-order {
 		margin-right: 20px;
+	}
+}
+
+.footer {
+	padding: 80px 0px 90px;
+	background-color: #444a62;
+	&__item {
+		display: flex;
+	}
+
+	&__what,
+	&__office,
+	&__connect {
+		display: flex;
+		flex-direction: column;
+		flex: 0 1 27%;
+		padding-left: 60px;
+	}
+
+	&__office-title-item,
+	&__what-title-item,
+	&__connect-title-item {
+		position: relative;
+	}
+
+	&__what-title,
+	&__office-title,
+	&__connect-title {
+		text-transform: uppercase;
+		color: $l-gray;
+		font-size: $fs-middle;
+	}
+
+	&__what-title::before,
+	&__office-title::before,
+	&__connect-title::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: -40px;
+		transform: translate(0%, -50%);
+		width: 25px;
+		height: 25px;
+	}
+
+	&__what-title::before {
+		background: url(../icons/what.svg) 0 0/ 100% no-repeat;
+	}
+	&__office-title::before {
+		background: url(../icons/office.svg) 0 0/ 100% no-repeat;
+	}
+	&__connect-title::before {
+		background: url(../icons/connect.svg) 0 0/ 100% no-repeat;
+	}
+
+	&__what-text,
+	&__office-text,
+	&__connect-text {
+		font-size: $fs-text;
+		color: $m-gray;
+		padding-top: 40px;
+	}
+	&__office-text,
+	&__connect-text {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__what-text {
+		line-height: 16px;
+	}
+
+	&__connect-facebook,
+	&__connect-twitter,
+	&__connect-linkedin {
+		padding-left: 50px;
+	}
+
+	&__connect-facebook-item,
+	&__connect-twitter-item,
+	&__connect-linkedin-item {
+		position: relative;
+	}
+
+	&__connect-facebook::before,
+	&__connect-twitter::before,
+	&__connect-linkedin::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 10px;
+		transform: translate(0%, -50%);
+		width: 16px;
+		height: 16px;
+	}
+
+	&__connect-facebook::before{
+		background: url(../icons/facebook.svg) 0 0/ 100% no-repeat;
+	}
+
+	&__connect-twitter::before{
+		background: url(../icons/twitter.svg) 0 0/ 100% no-repeat;
+	}
+
+	&__connect-linkedin::before{
+		background: url(../icons/linkedin.svg) 0 0/ 100% no-repeat;
+	}
+
+	&__logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 0 1 19%;
 	}
 }
